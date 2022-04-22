@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+
+    <link rel="icon" href="img/favicon.jpg">
+    <link rel="stylesheet" href="css/reg.css">
+    <link rel="stylesheet" href="lib/css/bootstrap.css">
+</head>
+<body>
+  <script>
+    
+    function save ()  {
+        let f = file1.files[0];
+        if (f) {
+            image1.src = URL.createObjectURL(f);
+            localStorage.setItem('myImage', image1.src);
+        }
+    }
+    
+    image1.src = localStorage.getItem('myImage')
+    </script>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="img/favicon.jpg" height="30" style="margin-right: 15px;">ДругВокруг</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Переключатель навигации">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="reg.html">Регистрация</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="auth.html">Войти</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Поиск">
+              <button class="btn btn-outline-success" type="submit">Поиск</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <main style="margin: 6.25% 12.5%;">
+        <h1 style="user-select: none; margin-bottom: 15px;">Регистрация</h1>
+        <form class="row g-3">
+            <div class="col-md-4">
+              <label for="validationDefault01" class="form-label">Имя</label>
+              <input type="text" class="form-control" id="validationDefault01" placeholder="Василий" required>
+            </div>
+            <div class="col-md-4">
+              <label for="validationDefaultUsername" class="form-label">Имя пользователя</label>
+              <div class="input-group">
+                <span class="input-group-text" id="inputGroupPrepend2">@</span>
+                <input type="text" class="form-control" id="validationDefaultUsername" aria-describedby="inputGroupPrepend2" placeholder="@vase4ka228" required>
+              </div>
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Адрес электронной почты</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="vasya@example.com">
+            </div>
+            <div class="col-md-6">
+                <label for="inputPassword3" class="form-label">Пароль</label>
+                <input type="password" class="form-control" id="inputPassword3" required>
+              </div>
+              <div class="col-md-6">
+                <label for="inputPassword3" class="form-label">Повтор пароля</label>
+                <input type="password" class="form-control" id="inputPassword3" required>
+            </div>
+            <hr>
+            <div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label">О себе (до 1000 символов)</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" style="height: 256px;" maxlength="1000"></textarea>
+            </div>
+            <label for="basic-url" class="form-label">ВК</label>
+              <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon3">https://vk.com/</span>
+              <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+            </div>
+            <label for="basic-url" class="form-label">Одноклассники</label>
+              <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon3">https://ok.ru/profile/</span>
+              <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+            </div>
+            <label for="basic-url" class="form-label">Телеграм</label>
+              <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon3">@</span>
+              <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+            </div>
+            <div class="col-md-6">
+              <label for="validationDefault03" class="form-label">Город</label>
+              <input type="text" class="form-control" id="validationDefault03" placeholder="Саратов" required>
+            </div>
+            <div class="col-md-3">
+              <label for="validationDefault04" class="form-label">Пол</label>
+              <select class="form-select" id="validationDefault04" required>
+                <option selected>Мужской</option>
+                <option>Женский</option>
+                <option>Предпочитаю не указывать</option>
+              </select>
+            </div>
+            <div class="col-md-3">
+              <label for="validationDefault05" class="form-label">Статус</label>
+              <input type="text" class="form-control" id="validationDefault05" placeholder="Per aspera ad astra">
+            </div>
+            <div class="col-12">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="invalidCheck2" required>
+                <label class="form-check-label" for="invalidCheck2">
+                  Примите <a href="#">условия и соглашения</a>
+                </label>
+              </div>
+            </div>
+            <div>
+              <h4>Что вам интересно?</h4>
+              <div class="agregator">
+                <label class="checkbox-btn r">
+                  <input type="checkbox" id="it">
+                  <span><img src="img/braces.svg"></img>IT</span>
+                </label>
+                <label class="checkbox-btn g">
+                  <input type="checkbox" id="business">
+                  <span><img src="img/business.svg"></img>Бизнес</span>
+                </label>
+                <label class="checkbox-btn b">
+                  <input type="checkbox" id="sport">
+                  <span><img src="img/sport.svg"></img>Спорт</span>
+                </label>
+                <label class="checkbox-btn r">
+                  <input type="checkbox" id="music">
+                  <span><img src="img/music.svg"></img>Музыка</span>
+                </label>
+                <label class="checkbox-btn g">
+                  <input type="checkbox" id="animals">
+                  <span><img src="img/animals.svg"></img>Животные</span>
+                </label>
+                <label class="checkbox-btn b">
+                  <input type="checkbox" id="memes">
+                  <span><img src="img/memes.svg"></img>Мемы</span>
+                </label>
+                <label class="checkbox-btn r">
+                  <input type="checkbox" id="games">
+                  <span><img src="img/games.svg"></img>Игры</span>
+                </label>
+                <label class="checkbox-btn g">
+                  <input type="checkbox" id="science">
+                  <span><img src="img/science.svg"></img>Естествознание</span>
+                </label>
+                <label class="checkbox-btn b">
+                  <input type="checkbox" id="maths">
+                  <span><img src="img/maths.svg"></img>Точные науки</span>
+                </label>
+                <label class="checkbox-btn r">
+                  <input type="checkbox" id="politics">
+                  <span><img src="img/politics.svg"></img>Политика</span>
+                </label>
+                <label class="checkbox-btn g">
+                  <input type="checkbox" id="mind">
+                  <span><img src="img/mind.svg"></img>Психология</span>
+                </label>
+                <label class="checkbox-btn b">
+                  <input type="checkbox" id="pc">
+                  <span><img src="img/pc.svg"></img>Компьютеры</span>
+                </label>
+                <label class="checkbox-btn r">
+                  <input type="checkbox" id="laws">
+                  <span><img src="img/laws.svg"></img>Право</span>
+                </label>
+                <label class="checkbox-btn g">
+                  <input type="checkbox" id="food">
+                  <span><img src="img/food.svg"></img>Кулинария</span>
+                </label>
+                <label class="checkbox-btn b">
+                  <input type="checkbox" id="parfum">
+                  <span><img src="img/parfum.svg"></img>Парфюмерия</span>
+                </label>
+                <label class="checkbox-btn r">
+                  <input type="checkbox" id="build">
+                  <span><img src="img/build.svg"></img>Строительство</span>
+                </label>
+                <label class="checkbox-btn g">
+                  <input type="checkbox" id="creator">
+                  <span><img src="img/creator.svg"></img>Контент</span>
+                </label>
+                <label class="checkbox-btn b">
+                  <input type="checkbox" id="helping">
+                  <span><img src="img/helping.svg"></img>Благотворительность</span>
+                </label>
+                <label class="checkbox-btn r">
+                  <input type="checkbox" id="fighting">
+                  <span><img src="img/fighting.svg"></img>Единоборства</span>
+                </label>
+                <label class="checkbox-btn g">
+                  <input type="checkbox" id="dancing">
+                  <span><img src="img/dancing.svg"></img>Танцы</span>
+                </label>
+                <label class="checkbox-btn b">
+                  <input type="checkbox" id="trading">
+                  <span><img src="img/trading.svg"></img>Инвестиции</span>
+                </label>
+                <label class="checkbox-btn r">
+                  <input type="checkbox" id="history">
+                  <span><img src="img/history.svg"></img>История</span>
+                </label>
+                <label class="checkbox-btn b">
+                  <input type="checkbox" id="drawing">
+                  <span><img src="img/drawing.svg"></img>Рисование</span>
+                </label>
+              </div>
+            </div>
+            <div class="col-12">
+              <button class="btn btn-success" type="submit">Зарегистрировать!</button>
+              <button class="btn btn-danger" type="reset">Очистить</button>
+            </div>
+        </form>
+      </main>
+    <script type="text/javascript" src="lib/js/bootstrap.js"></script>
+</body>
+</html>

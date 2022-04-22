@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Войти</title>
+
+    <link rel="icon" href="img/favicon.jpg">
+    <link rel="stylesheet" href="css/reg.css">
+    <link rel="stylesheet" href="lib/css/bootstrap.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="img/favicon.jpg" height="30" style="margin-right: 15px;">ДругВокруг</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Переключатель навигации">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="auth.html">Войти</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="reg.html">Регистрация</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Поиск">
+              <button class="btn btn-outline-success" type="submit">Поиск</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <main style="margin: 6.25% 12.5%;">
+        <h1>Войти</h1>
+        <div class="row mb-3">
+          <label for="inputEmail3" class="col-sm-2 col-form-label">Ник</label>
+          <div class="col-sm-10">
+            <div class="input-group">
+              <span class="input-group-text" id="inputGroupPrepend2">@</span>
+              <input type="text" class="form-control" id="validationDefaultUsername" aria-describedby="inputGroupPrepend2" placeholder="@vase4ka228" required>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="inputPassword3" class="col-sm-2 col-form-label">Пароль</label>
+          <div class="col-sm-10">
+            <input type="password" class="form-control" id="inputPassword3">
+          </div>
+        </div>
+        <div class="col-12">
+          <button class="btn btn-success" type="submit">Войти!</button>
+          <button class="btn btn-danger" type="reset">Очистить</button>
+        </div>
+      </main>
+    <script type="text/javascript" src="lib/js/bootstrap.js"></script>
+</body>
+</html>
